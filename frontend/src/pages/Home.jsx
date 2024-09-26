@@ -15,6 +15,7 @@ import About from "../components/about/About";
 import ServiceList from "../components/services/ServiceList";
 import DoctorsList from "../components/doctors/DoctorsList";
 import FaqList from "../components/faq/FaqList";
+import Testimonial from "../components/testimonial/Testimonial";
 
 function Home() {
   return (
@@ -258,15 +259,29 @@ function Home() {
             <div className="w-1/2 hidden md:block">
               <img src={faqImg} alt="" />
             </div>
-          
-          <div className="w-full md:w-1/2">
-            <h2 className="heading">Most Questions by Our Beloved Patients</h2>
-          
-          <FaqList/>
-          </div>
+
+            <div className="w-full md:w-1/2">
+              <h2 className="heading">
+                Most Questions by Our Beloved Patients
+              </h2>
+
+              <FaqList />
+            </div>
           </div>
         </div>
       </section>
+
+      {/*testimonial section */}
+      <div className="container">
+        <div className="xl:w-[470px mx-auto]">
+          <h2 className="heading text-center">What Our Patients Say</h2>
+          <p className="text_para text-center">
+            World Class Care for Everyone. Our Health System offers unmatched
+            expert health care.
+          </p>
+        </div>
+        <Testimonial/>
+      </div>
     </>
   );
 }
