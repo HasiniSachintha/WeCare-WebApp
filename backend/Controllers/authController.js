@@ -49,6 +49,8 @@ export const register = async (req,res) => {
         role
       })
     }
+    console.log(req.body);
+    
 
     await user.save();
 
@@ -89,7 +91,7 @@ export const login = async (req,res) => {
 
     res
     .status(200)
-    .json({ status: 'true',message:'User logged in successfully', ...rest, role});
+    .json({ status: 'true',message:'User logged in successfully', ...rest, role, token});
 
     
   } catch (error) {
