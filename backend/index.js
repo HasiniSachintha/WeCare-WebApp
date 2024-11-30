@@ -4,6 +4,8 @@ import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoutes from "./Routes/auth.js";
+import userRoutes from "./Routes/user.js";
+import doctorRoutes from "./Routes/doctor.js";
 
 
 dotenv.config();
@@ -38,6 +40,9 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/api/v1/auth",authRoutes);
+app.use("/api/v1/users",userRoutes);
+app.use("/api/v1/doctors",doctorRoutes);
+
 
 app.listen(port, ()=>{
   connectDB();
